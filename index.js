@@ -27,7 +27,8 @@ aiRouter.get('/summary/:id', async (req, res) => {
 					role : 'user',
 					content : prompt
 				}
-			]
+			],
+			model : 'gpt-5.2'
 		})
 
 		console.log('OpenAI response:', completion)
