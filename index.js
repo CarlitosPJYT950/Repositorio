@@ -37,5 +37,8 @@ aiRouter.get('/summary/:id', async (req, res) => {
 		if (!summary){return res.status(502).json({error : 'No summary generated'})}
 
 		return res.json({summary})
-	} catch(){return res.status(500).json({error : 'Error generating summary'})}
+	} catch(){
+		console.log(error)
+		return res.status(500).json({error : 'Error generating summary')}
+	}
 })
