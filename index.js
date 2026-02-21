@@ -14,7 +14,7 @@ aiRouter.get('/summary/:id', async (req, res) => {
 		'Resumen en 4-6 frases la siguiente oferta de trabajo:',
 		'Incluye: rol, empresa, ubicacion y requisitos claves',
 		'Usa un tono claro y directo en español'
-	].join('n')
+	].join('\n')
 
 	try{
 		const completion = await aopenai.chat.completions.create({
@@ -38,8 +38,9 @@ aiRouter.get('/summary/:id', async (req, res) => {
 		if (!summary){return res.status(502).json({error : 'No summary generated'})}
 
 		return res.json({summary})
-	} catch(){
+	}
+	catch(error){
 		console.log(error)
-		return res.status(500).json({error : 'Error generating summary')}
+		return res.status(500).json({error : 'Error generating summary'})
 	}
 })
