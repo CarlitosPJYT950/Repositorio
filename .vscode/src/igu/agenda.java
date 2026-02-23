@@ -1,7 +1,14 @@
 package igu;
 public class agenda extends javax.swing.JFrame{
+    String cc[] = new String[10];
+    String[] nombre = new String[10];
+    String[] apellido = new String[10];
+    String[] direccion = new String[10];
+    String[] telefono = new String[10];
+    String fecha[] = new String[10];
+    
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(agenda.class.getName());
-    public agenda() {initComponents();}
+    public agenda(){initComponents();}
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -14,20 +21,20 @@ public class agenda extends javax.swing.JFrame{
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         cedulaCiudadania = new javax.swing.JTextField();
-        nombre = new javax.swing.JTextField();
-        apellido = new javax.swing.JTextField();
+        txtNombre = new javax.swing.JTextField();
+        txtApellido = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        direccion = new javax.swing.JTextField();
+        txtDireccion = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        telefono = new javax.swing.JTextField();
+        txtTelefono = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         fecNac = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        prev = new javax.swing.JButton();
+        guardar = new javax.swing.JButton();
+        next = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtIndice = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -46,7 +53,7 @@ public class agenda extends javax.swing.JFrame{
 
         cedulaCiudadania.addActionListener(this::cedulaCiudadaniaActionPerformed);
 
-        nombre.addActionListener(this::nombreActionPerformed);
+        txtNombre.addActionListener(this::txtNombreActionPerformed);
 
         jLabel5.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
         jLabel5.setText("DIRECCION:");
@@ -57,17 +64,22 @@ public class agenda extends javax.swing.JFrame{
         jLabel7.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
         jLabel7.setText("F. NAC:");
 
-        jButton1.setText("<<");
+        prev.setText("<<");
+        prev.addActionListener(this::prevActionPerformed);
 
-        jButton2.setFont(new java.awt.Font("Courier New", 0, 12)); // NOI18N
-        jButton2.setText("GUARDAR");
+        guardar.setFont(new java.awt.Font("Courier New", 0, 12)); // NOI18N
+        guardar.setText("GUARDAR");
+        guardar.addActionListener(this::guardarActionPerformed);
 
-        jButton3.setText(">>");
+        next.setText(">>");
+        next.addActionListener(this::nextActionPerformed);
 
         jLabel8.setFont(new java.awt.Font("Courier New", 0, 12)); // NOI18N
         jLabel8.setText("INDICE:");
 
-        jTextField1.setText("0");
+        txtIndice.setEditable(false);
+        txtIndice.setText("0");
+        txtIndice.addActionListener(this::txtIndiceActionPerformed);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -87,8 +99,8 @@ public class agenda extends javax.swing.JFrame{
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(cedulaCiudadania)
-                    .addComponent(nombre)
-                    .addComponent(apellido, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE))
+                    .addComponent(txtNombre)
+                    .addComponent(txtApellido, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -96,8 +108,8 @@ public class agenda extends javax.swing.JFrame{
                     .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(direccion)
-                    .addComponent(telefono)
+                    .addComponent(txtDireccion)
+                    .addComponent(txtTelefono)
                     .addComponent(fecNac, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30))
             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -106,16 +118,16 @@ public class agenda extends javax.swing.JFrame{
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(211, 211, 211)
-                .addComponent(jButton1)
+                .addComponent(prev)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
-                    .addComponent(jButton2))
+                        .addComponent(txtIndice, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
+                    .addComponent(guardar))
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(next)
                 .addContainerGap(265, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -126,10 +138,10 @@ public class agenda extends javax.swing.JFrame{
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
-                            .addComponent(direccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -142,22 +154,22 @@ public class agenda extends javax.swing.JFrame{
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
-                            .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
-                            .addComponent(apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(prev)
+                    .addComponent(guardar)
+                    .addComponent(next))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtIndice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
@@ -166,16 +178,11 @@ public class agenda extends javax.swing.JFrame{
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jSeparator1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jSeparator2)))
+                    .addComponent(jSeparator1)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jSeparator2))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(250, 250, 250)
@@ -213,18 +220,69 @@ public class agenda extends javax.swing.JFrame{
         // TODO add your handling code here:
     }//GEN-LAST:event_cedulaCiudadaniaActionPerformed
 
-    private void nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActionPerformed
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nombreActionPerformed
+    }//GEN-LAST:event_txtNombreActionPerformed
+
+    private void nextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextActionPerformed
+        // TODO add your handling code here:
+        String indice = txtIndice.getText();
+        int indi = Integer.parseInt(indice);
+        
+        if (indi < 10){
+            indi = indi + 1;
+            indice = String.valueOf(indi);
+            
+            txtIndice.setText(indice);
+            cedulaCiudadania.setText(cc[indi]);
+            txtNombre.setText(nombre[indi]);
+            txtApellido.setText(apellido[indi]);
+            txtDireccion.setText(direccion[indi]);
+            txtTelefono.setText(telefono[indi]);
+            fecNac.setText(fecha[indi]);
+        }
+    }//GEN-LAST:event_nextActionPerformed
+
+    private void txtIndiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIndiceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIndiceActionPerformed
+
+    private void prevActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prevActionPerformed
+        // TODO add your handling code here:
+        String indice = txtIndice.getText();
+        int indi = Integer.parseInt(indice);
+        
+        if (indi > 0){
+            indi = indi - 1;
+            indice = String.valueOf(indi);
+            
+            txtIndice.setText(indice);
+            cedulaCiudadania.setText(cc[indi]);
+            txtNombre.setText(nombre[indi]);
+            txtApellido.setText(apellido[indi]);
+            txtDireccion.setText(direccion[indi]);
+            txtTelefono.setText(telefono[indi]);
+            fecNac.setText(fecha[indi]);
+        }
+    }//GEN-LAST:event_prevActionPerformed
+
+    private void guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarActionPerformed
+        // TODO add your handling code here:
+        String indice = txtIndice.getText();
+        int indi = Integer.parseInt(indice);
+        
+        cc[indi] = cedulaCiudadania.getText();
+        nombre[indi] = txtNombre.getText();
+        apellido[indi] = txtApellido.getText();
+        direccion[indi] = txtDireccion.getText();
+        telefono[indi] = txtTelefono.getText();
+        fecha[indi] = fecNac.getText();
+    }//GEN-LAST:event_guardarActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField apellido;
     private javax.swing.JTextField cedulaCiudadania;
-    private javax.swing.JTextField direccion;
     private javax.swing.JTextField fecNac;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton guardar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -238,8 +296,12 @@ public class agenda extends javax.swing.JFrame{
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField nombre;
-    private javax.swing.JTextField telefono;
+    private javax.swing.JButton next;
+    private javax.swing.JButton prev;
+    private javax.swing.JTextField txtApellido;
+    private javax.swing.JTextField txtDireccion;
+    private javax.swing.JTextField txtIndice;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
 }
