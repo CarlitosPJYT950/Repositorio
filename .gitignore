@@ -11,3 +11,5 @@
 /node_modules/build/build/
 /.vscode/nbproject/private/
 /.vscode/build/
+/public/bin/nbproject/private/
+/public/bin/build/
