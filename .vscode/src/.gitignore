@@ -1,0 +1,15 @@
+/bin/nbproject/private/
+/bin/build/
+.npmignore
+/node_modules/test/build/
+/node_modules/test/nbproject/private/
+/node_modules/settings/nbproject/private/
+/node_modules/settings/build/
+/node_modules/repo/nbproject/private/
+/node_modules/repo/build/
+/node_modules/lib/nbproject/private/
+/node_modules/lib/build/
+/node_modules/utils/nbproject/private/
+/node_modules/utils/build/
+/target/nbproject/private/
+/target/build/
