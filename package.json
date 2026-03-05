@@ -5,11 +5,13 @@
   "main": "index.js",
   "workspaces": [
     ".vscode",
-	  "node_modules",
+    "node_modules",
     "public",
-	  "src"
+    "src"
   ],
-  "scripts": {"test": "echo \"Error: no test specified\" && exit 1"},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CarlitosPJYT950/Repositorio.git"
@@ -18,7 +20,12 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "bugs": {"url": "https://github.com/CarlitosPJYT950/Repositorio/issues"},
+  "bugs": {
+    "url": "https://github.com/CarlitosPJYT950/Repositorio/issues"
+  },
   "homepage": "https://github.com/CarlitosPJYT950/Repositorio#readme",
-  "dependencies": {"openai": "^6.22.0"}
+  "dependencies": {
+    "openai": "^6.22.0",
+    "tailwinds": "^0.0.0"
+  }
 }
