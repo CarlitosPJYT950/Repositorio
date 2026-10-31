@@ -1,3 +1,7 @@
 package main
 
-Printf("Hello, World!\n")
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
