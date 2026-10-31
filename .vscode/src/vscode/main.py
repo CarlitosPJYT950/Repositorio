@@ -2,7 +2,7 @@ import os, zipfile
 
 with open("zeros.bin", "wb") as f:
     # TODO: write code...
-    f.write(bytes(100_000_000))
+    f.write(bytes(100_000))
 
 with zipfile.ZipFile("zeros.zip", "w", zipfile.ZIP_DEFLATED) as z:
     
