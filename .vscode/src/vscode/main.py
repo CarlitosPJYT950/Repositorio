@@ -5,7 +5,8 @@ with open("zeros.bin", "wb") as f:
     f.write(bytes(100_000_000))
 
 with zipfile.ZipFile("zeros.zip", "w", zipfile.ZIP_DEFLATED) as z:
-    # todo: write code...
+    
+    # : TODO: write code...
     z.write("zeros.bin")
 
 print(os.path.getsize("zeros.bin"))
