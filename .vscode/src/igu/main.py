@@ -1,10 +1,10 @@
 import sqlite3
 
-conexao = sqlite3.connect("coin.cbl")
+conexao = sqlite3.connect("coin.sql")
 cursor = conexao.cursor()
 
 cursor.execute("CREATE TABLE IF NOT EXISTS usuarios (id INTEGER PRIMARY KEY, nome TEXT)")
-cursor.execute("INSERT INTO usuarios (nome) VALUES ('Pedro', 'Pablo', 'Jacinto', 'Jose')")
+cursor.execute("INSERT INTO usuarios (nome) VALUES ('Juan')")
 
 conexao.commit()
 
