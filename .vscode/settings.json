@@ -342,5 +342,6 @@
             "ADC" : ["Tirador", "Carry", "HiperCarry", 1],
             "S" : ["Soporte", "Tanque", 5]
         }
-    }
+    },
+    "python.terminal.useEnvFile": true
 }
