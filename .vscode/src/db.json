@@ -3,6 +3,7 @@
     "version" : "1.0.0",
     "files" : [
         ".idea",
+        ".venv",
         ".vscode",
         "node_modules",
         "public",
