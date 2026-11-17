@@ -5,6 +5,7 @@
   "main": "index.js",
   "workspace": [
     ".idea",
+    ".venv",
     ".vscode",
     "node_modules",
     "public",
