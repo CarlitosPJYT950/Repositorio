@@ -42,39 +42,39 @@ public class agenda extends javax.swing.JFrame{
         jLabel1.setFont(new java.awt.Font("Courier New", 0, 16)); // NOI18N
         jLabel1.setText("AGENDA ELECTRONICA");
 
-        jLabel2.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Courier New", 0, 12)); // NOI18N
         jLabel2.setText("c.c:");
 
-        jLabel3.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Courier New", 0, 12)); // NOI18N
         jLabel3.setText("NOMBRE:");
 
-        jLabel4.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Courier New", 0, 12)); // NOI18N
         jLabel4.setText("APELLIDO:");
 
         cedulaCiudadania.addActionListener(this::cedulaCiudadaniaActionPerformed);
 
         txtNombre.addActionListener(this::txtNombreActionPerformed);
 
-        jLabel5.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Courier New", 0, 12)); // NOI18N
         jLabel5.setText("DIRECCION:");
 
-        jLabel6.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Courier New", 0, 12)); // NOI18N
         jLabel6.setText("TELEFONO:");
 
-        jLabel7.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Courier New", 0, 12)); // NOI18N
         jLabel7.setText("F. NAC:");
 
         prev.setText("<<");
         prev.addActionListener(this::prevActionPerformed);
 
-        guardar.setFont(new java.awt.Font("Courier New", 0, 12)); // NOI18N
+        guardar.setFont(new java.awt.Font("Courier New", 0, 10)); // NOI18N
         guardar.setText("GUARDAR");
         guardar.addActionListener(this::guardarActionPerformed);
 
         next.setText(">>");
         next.addActionListener(this::nextActionPerformed);
 
-        jLabel8.setFont(new java.awt.Font("Courier New", 0, 12)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Courier New", 0, 10)); // NOI18N
         jLabel8.setText("INDICE:");
 
         txtIndice.setEditable(false);
